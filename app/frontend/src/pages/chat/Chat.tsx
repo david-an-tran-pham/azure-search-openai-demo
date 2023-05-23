@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Checkbox, Panel, DefaultButton, TextField, SpinButton } from "@fluentui/react";
 import { SparkleFilled } from "@fluentui/react-icons";
-
+import ateaLogo from "./atea_logo.png";
 import styles from "./Chat.module.css";
 
 import { chatApi, Approaches, AskResponse, ChatRequest, ChatTurn } from "../../api";
@@ -134,7 +134,7 @@ const Chat = () => {
                 <div className={styles.chatContainer}>
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
-                            <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" />
+                            <img src={ateaLogo} alt="Atea Logo" style={{ fontSize: "80px", fill: "rgba(115, 118, 225, 1)" }} aria-hidden="true" aria-label="Chat logo" />
                             <h1 className={styles.chatEmptyStateTitle}>Atea Asset Management Data</h1>
                             <h2 className={styles.chatEmptyStateSubtitle}>Spør om hva som helst relatert til ADS</h2>
                             <h3 className={styles.chatEmptyStateSubtitle}>NB. Kan være litt sensitiv på rettskriving</h3>
